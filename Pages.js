@@ -1,14 +1,14 @@
 const express = require('express');
-const book = express()
+const pages = express()
 
-book.get('/',(req,res)=>{
+pages.get('/',(req,res)=>{
     res.send(`
-    <h2>Pages</h2>
+    <h2>NEWS</h2>
     <dl>
-        <dt>Maths book</dt>
-        <dd>The study of mathematics as a "demonstrative discipline" began in the 6th century BC with the Pythagoreans, 
-        who coined the term "mathematics" from the ancient Greek subject of instruction </dd>
+        <li>Maruti suzuki</li>
+        <dd>All Maruti Suzuki hatchbacks, sedans, MPVs, SUVs and commercial vehicles are now compliant with the new BS6 Phase-II Real Driving Emissions (RDE) regulations, alongside being compatible with E20 fuel.
+        </dd>
     </dl>
     `)
 })
-module.exports=book
+module.exports=pages

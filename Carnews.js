@@ -1,42 +1,42 @@
 const express = require('express');
-const Server = express()
+const Carnews = express()
 
-Server.get('/',(req,res)=>{
-    res.send("This is service page")
+Carnews.get('/',(req,res)=>{
+    res.send("CARS NEWS")
 })
 
 const services = [
     {
         id:1,
-        name:'web development'
+        name:'MARUTI'
     },
     {
         id:2,
-        name:'mobile app development'
+        name:'HONDA'
     },
     {
         id:3,
-        name:'python programing...'
+        name:'HYUNDAI'
     },
     {
         id:4,
-        name:'Java programing'
+        name:'BMW'
     },
     {
         id:5,
-        name:'Data analystics'
+        name:'BENZ'
     },
     {
         id:6,
-        name:'Ethical hacking'
+        name:'ASTRO MARTIN'
     }
 ]
 
-Server.get('/:no',(req,res)=>{
+Carnews.get('/:no',(req,res)=>{
     const serId = Number(req.params.no)
     const findService = services.find((service)=>{
         service.id=serId
         console.log(findService)
     })
 })
-module.exports = Server
+module.exports = Carnews

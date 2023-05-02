@@ -5,7 +5,7 @@ user.get('/',(request,response)=>{
 }) 
 
 user.route('/:id').get((request,response)=>{ 
-    response.send(`hello pepole whatssup ${request.params.id}`) 
+    response.send(`This is requested url id:  ${request.params.id}`) 
 })
 
 user.param('id',(request,response,next,id)=>{ 
